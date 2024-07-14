@@ -107,41 +107,41 @@
                 <a href="beratbadanideal.php">
                     <img src="picture/bmi.png" alt="Indeks BMI">
                     <h4>Kalkulator BMI</h4>
-                    <p>Menghitung Indeks Massa Tubuh (BMI) berdasarkan<br>berat badan dan tinggi badan.</p>
+                    <p>Menghitung Berat badan Ideal berdasarkan<br>usia, berat badan dan tinggi badan.</p>
                 </a>
             </div>
             <div class="menu-item">
               <a href="kaloriharian.php">
                 <img src="picture/calories.png" alt="Kalori harian">
                 <h4>Kalkulator Kalori Harian</h4>
-                <p>Menghitung jumlah kalori yang perlu dikonsumsi<br>berdasarkan berat badan, tinggi badan, dan usia.</p>
+                <p>Menghitung jumlah kalori yang perlu dikonsumsi</p>
                 </a>
             </div>
             <div class="menu-item">
               <a href="rekomendasidiet.php">
                 <img src="picture/diet.png" alt="Rekomendasi Diet">
                 <h4>Rekomendasi Diet</h4>
-                <p>Menghitung rekomendasi diet berdasarkan berat badan, tinggi badan, dan usia.</p>
+                <p>Memberi rekomendasi diet berdasarkan berat badan, tinggi badan, dan usia.</p>
                 </a>
             </div>
         </div>
         <div class="menu-items">
             <div class="menu-item">
                 <a href="kalkulatorjantung.php">
-                    <img src="picture/jantung.png" alt="Indeks BMI">
+                    <img src="picture/jantung.png" alt="Resiko Serangan Jantung">
                     <h4>Kalkulator Resiko Serangan Jantung</h4>
-                    <p>Cek kalkulator jantung di sini untuk menghitung risiko<br>serangan jantung pada tubuh</p>
+                    <p>menghitung risiko<br>serangan jantung pada tubuh</p>
                 </a>
             </div>
             <div class="menu-item">
-                <img src="picture/calories.png" alt="Kalori harian">
-                <h4>Kalkulator Kalori Harian</h4>
-                <p>Menghitung jumlah kalori yang perlu dikonsumsi<br>berdasarkan berat badan, tinggi badan, dan usia.</p>
+                <img src="picture/usiahamil.png" alt="Usia Kehamilan">
+                <h4>Cek Usia Kehamilan</h4>
+                <p>Memperkirakan usia kehamilan<br>berdasarkan hari pertama haid terakhir</p>
             </div>
             <div class="menu-item">
-                <img src="picture/diet.png" alt="Rekomendasi Diet">
-                <h4>Rekomendasi Diet</h4>
-                <p>Menghitung rekomendasi diet berdasarkan berat badan, tinggi badan, dan usia.</p>
+                <img src="picture/analisispenyakit.png" alt="Rekomendasi Diet">
+                <h4>Analisi Gejala Penyakit</h4>
+                <p>Menganalisis kemungkinan penyakit <br> melalui gejala yang dirasakan</p>
             </div>
         </div>
     </div>
