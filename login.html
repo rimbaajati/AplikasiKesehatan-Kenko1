@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kenkō Login</title>
+    <link rel="icon" href="picture/logo.png" sizes="64x64" type="image/png" />
+  </head>
+  <link rel="stylesheet" href="login.css" />
+  <body>
+    <form action="proses_login.php" method="POST">
+      <div class="kotak_login">
+        <img src="picture/logo.png" alt="Logo" width="180" />
+        <h1>Login</h1>
+        <form>
+          <input
+            name="username"
+            type="text"
+            class="form-control"
+            placeholder="Username"
+            required
+          />
+          <input
+            name="password"
+            type="password"
+            class="form-control"
+            placeholder="Password"
+            required
+          />
+          <div class="checkbox">
+            <input type="checkbox" id="remember-me" />
+            <label for="remember-me">Remember me</label>
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <p class="forgot-password"><a href="#">Forgot password?</a></p>
+        </form>
+
+        <p class="register">
+          Don't have an account? <a href="register.html">Register now</a>
+        </p>
+      </div>
+      <footer>
+        <div class="download-link-gplay">
+          <a href="#"><img src="gplaylogo.png" width="10%" /></a>
+          <div class="download-link-ios"></div>
+          <a href="#"><img src="appstorelogo.png" width="12%" /></a>
+        </div>
+        <div class="footer-link">
+          <a href="#">Tentang Kami</a>
+          <a href="#">Kontak</a>
+          <a href="#">Bantuan</a>
+        </div>
+        <div class="copyright">
+          <p>
+            Copyright <strong>Kenkō Sentaa (健康センター)</strong>. All Rights
+            Reserved
+          </p>
+        </div>
+      </footer>
+    </form>
+  </body>
+</html>
