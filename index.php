@@ -24,6 +24,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  
 </head>
 
 <body>
@@ -67,15 +68,14 @@
           <h3 class="section-title">Tentang Kami</h3>
           <span class="section-divider"></span>
           <p class="section-description">
-            Selamat datang di Life Balance, tempat Anda menemukan keseimbangan antara kesehatan,<br>
+            Selamat datang Kenko Sentaa, tempat Anda menemukan keseimbangan antara kesehatan,<br>
             kebahagiaan, dan produktivitas. Kami berkomitmen untuk membantu Anda mencapai gaya hidup<br>
             yang lebih baik dengan menyediakan berbagai produk dan layanan yang dirancang untuk<br>
             memenuhi kebutuhan Anda.  
           </p>
         </div>
-
         <div class="row">
-          <div class="col-lg-6 about-img" data-aos="fade-right" dat-aos-delay="100">
+          <div class="col-lg-6 about-img" id="about" data-aos="fade-right" dat-aos-delay="100">
             <img src="picture/konten2.jpg" alt="">
           </div>
 

@@ -7,7 +7,7 @@
 
   <title>Kenkō Sentaa (健康センター)</title>
   <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta author="Rimba Jati" name="Kenko Sentaa">
 
   <!-- Favicons -->
   <link rel="icon" href="picture/logo.png" sizes="64x64" type="image/png">
@@ -32,13 +32,13 @@
   <header id="header" class="fixed-top d-flex align-items-center header-transparent">
     <div class="container d-flex justify-content-between align-items-center">
 
-      <div id="logo">
+      <div id="logokenko">
         <a href="index.php"><img src="picture/logokenko.png" alt="Logo" width="300px"></a>
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="index.php">Beranda</a></li>
+          <li><a class="nav-link scrollto" href="index.php">Beranda</a></li>
           <li><a class="nav-link scrollto" href="caridokter.php">Cari Dokter</a></li>
           <li><a class="nav-link scrollto" href="alat.php">Rumah Sakit</a></li>
           <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
@@ -59,7 +59,7 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto active" href="profil.php">Profil</a></li>
+          <li><a class="nav-link scrollto" href="profil.php">Profil</a></li>
           <li><a class="nav-link scrollto" href="login.html">Login</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

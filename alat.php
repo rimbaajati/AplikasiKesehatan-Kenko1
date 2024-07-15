@@ -25,27 +25,25 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <?php require('partials/header.php'); ?>
-</head>
-<style>
-  .menu-alat {
+  <style>
+    .menu-alat {
   padding: 20px;
   background-color: #f8f9fa; /* Warna latar belakang */
 }
 
-/* .container {
-  max-width: 800px;
+.container {
+  max-width:fit-content;
   margin: 0 auto;
-  margin-left: 0 auto;
-} */
-.slide-menu {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Menentukan 3 kolom per slide */
-    gap: 20px; /* Jarak antar item */
-    transition: transform 0.5s ease; /* Animasi transisi */
-    width: 100%; /* Lebar sesuai kontainer */
 }
-.slide-menu.active {
-    transform: translateX(-100%);
+
+.slide-menu {
+  display:flex; /* Mengubah display menjadi flex untuk scroll horizontal */
+  gap: 30px; /* Jarak antar item */
+  transition: transform 0.5s ease; /* Animasi transisi */
+  width: 100%; /* Lebar sesuai kontainer */
+  overflow-x: auto; /* Membuat scroll horizontal */
+  padding-bottom: 20px; /* Menambah padding bawah untuk memastikan tampilan yang baik */
+  padding-top: 35px;
 }
 
 .judul {
@@ -55,21 +53,25 @@
 }
 
 .menu-items {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tiga kolom per baris */
+  display: flex; /* Mengubah display menjadi flex untuk scroll horizontal */
   gap: 20px; /* Jarak antar grid item */
   max-width: 700px;
-  /* justify-content: center;
-  align-items: center; */
+  justify-content: center; /* Pusatkan item di tengah */
+  margin-right:80px;
 }
 
-.menu-item {
-  background-color: #fff; /* Warna latar belakang item */
-  border: 1px solid #ddd; /* Garis tepi item */
+.menu-item { /*perbox menu*/
+  background-color: #fff;
+  border: 4px solid #ddd; 
   border-radius: 8px;
-  padding: 20px;
+  padding-top: 20px;
   text-align: center;
   transition: transform 0.3s ease;
+  width: 250px;
+  flex: 0 0 auto; /* Biarkan lebar item menyesuaikan konten */
+  margin:0 auto;
+  margin-bottom: 20px; /* Jarak bawah antar item */
+  padding: 10px;
 }
 
 .menu-item:hover {
@@ -77,8 +79,8 @@
 }
 
 .menu-item img {
-  max-width: 100%;
-  height: auto;
+  width: auto;
+  height: 150px;
   margin-bottom: 10px;
 }
 
@@ -92,9 +94,8 @@
   line-height: 1.6;
   color: #555;
 }
-
 </style>
-
+</head>
 <body>
 <section class="menu-alat">
 <div class="container" data-aos="fade-up">
