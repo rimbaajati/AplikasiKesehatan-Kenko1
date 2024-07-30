@@ -5,26 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator Kalori Harian</title>
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
     </head>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
         }
 
         .box {
             background-color: white;
+            align-items: center;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 300px;
             margin:0 auto;
-            margin-top: 200px;
+            margin-top: 70px;
         }
 
         .judul h4 {
@@ -60,26 +58,37 @@
             text-align: center;
             margin-top: 20px;
         }
-
-        .btn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: #45a049;
-        }
-
-        .hasil {
-            margin-top: 20px;
-            text-align: center;
-            font-size: 16px;
-            font-weight: bold;
-        }
+        .btn-hitung{
+        background-color: #c2fbd7;
+        border: none;
+        color: green;
+        box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+        padding: 3px 10px;
+        padding-bottom: 7px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        margin: 0 auto;
+        margin-top: 10px;
+        border-radius: 100px;
+        cursor: pointer;
+        display: inline-block;
+        transition: all 250ms;
+        border: 0;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+    .btn-hitung:hover{
+        box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+        transform: scale(1.05) rotate(-1deg);
+    }
+    .hasil {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+    }
     </style>
 </head>
 <body>
@@ -110,7 +119,7 @@
                 <input type="text" id="usia" name="usia">
             </div>
             <div class="btn-container">
-                <button class="btn" onclick="hitungKalori()">Hitung</button>
+                <button class="btn-hitung" onclick="hitungKalori()">Hitung</button>
             </div>
             <div class="hasil" id="hasil"></div>
         </div>
@@ -131,7 +140,7 @@
             var kalori = hitungKaloriDariFormulaSederhana(berat, tinggi, usia);
 
             var hasil = document.getElementById('hasil');
-            hasil.innerHTML = `<p>Kebutuhan Kalori Harian Anda adalah: ${kalori.toFixed(2)} kkal</p>`;
+            hasil.innerHTML = `<img src="picture/food.png" alt="Food Image" style="width:70px; height:auto;"><p>Kebutuhan Kalori Harian Anda adalah: ${kalori.toFixed(2)} kkal</p>`;
         }
 
         function hitungKaloriDariFormulaSederhana(berat, tinggi, usia) {

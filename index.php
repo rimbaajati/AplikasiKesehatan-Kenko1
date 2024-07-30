@@ -25,14 +25,12 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   
+  <?php require "partials/header.php"; ?>
 </head>
 
 <body>
-<?php require "partials/header.php"; ?>
-
   <!-- ======= Hero Section ======= -->
   <section id="hero">
-
     <div class="hero-text" data-aos="zoom-out">
       <h2>Welcome to Kenko</h2>
       <p>Tempat di mana kesehatan dan keseimbangan hidup menjadi<br>
@@ -75,8 +73,8 @@
           </p>
         </div>
         <div class="row">
-          <div class="col-lg-6 about-img" id="about" data-aos="fade-right" dat-aos-delay="100">
-            <img src="picture/konten2.jpg" alt="">
+          <div class="about-img" id="about" data-aos="fade-right" dat-aos-delay="100">
+            <img src="picture/konten2.jpg" alt="Konten 2">
           </div>
 
           <div class="col-lg-6 content" data-aos="fade-left" dat-aos-delay="100">

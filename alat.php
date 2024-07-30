@@ -15,6 +15,9 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -26,24 +29,22 @@
   <link href="assets/css/style.css" rel="stylesheet">
   <?php require('partials/header.php'); ?>
   <style>
-    .menu-alat {
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.menu-alat {
   padding: 20px;
   background-color: #f8f9fa; /* Warna latar belakang */
+  margin-top: 50px;
 }
-
 .container {
   max-width:fit-content;
   margin: 0 auto;
 }
-
-.slide-menu {
-  display:flex; /* Mengubah display menjadi flex untuk scroll horizontal */
-  gap: 30px; /* Jarak antar item */
-  transition: transform 0.5s ease; /* Animasi transisi */
-  width: 100%; /* Lebar sesuai kontainer */
-  overflow-x: auto; /* Membuat scroll horizontal */
-  padding-bottom: 20px; /* Menambah padding bawah untuk memastikan tampilan yang baik */
-  padding-top: 35px;
+.slide-menu{
+  margin: 0 auto;
 }
 
 .judul {
@@ -53,11 +54,14 @@
 }
 
 .menu-items {
-  display: flex; /* Mengubah display menjadi flex untuk scroll horizontal */
-  gap: 20px; /* Jarak antar grid item */
-  max-width: 700px;
-  justify-content: center; /* Pusatkan item di tengah */
-  margin-right:80px;
+  gap :30px;
+  max-width: 70px;
+  display: flex;
+  flex-wrap: nowrap; /* Menghentikan wrap dan mengizinkan scroll horizontal */
+  gap: 30px; /* Jarak antara setiap menu item */
+  max-width: 100%; /* Lebar maksimum dari container */
+  padding: 20px 0; /* Padding di atas dan bawah */
+  justify-content: start;
 }
 
 .menu-item { /*perbox menu*/
@@ -68,10 +72,10 @@
   text-align: center;
   transition: transform 0.3s ease;
   width: 250px;
-  flex: 0 0 auto; /* Biarkan lebar item menyesuaikan konten */
   margin:0 auto;
   margin-bottom: 20px; /* Jarak bawah antar item */
   padding: 10px;
+  flex: 0 0 calc(25% - 30px);
 }
 
 .menu-item:hover {
@@ -88,11 +92,14 @@
   font-size: 18px;
   margin-bottom: 10px;
 }
-
+.menu-item h4{
+  font-weight: bold;
+}
 .menu-item p {
   font-size: 14px;
   line-height: 1.6;
   color: #555;
+  text-decoration: none;
 }
 </style>
 </head>
@@ -125,6 +132,11 @@
                 <p>Memberi rekomendasi diet berdasarkan berat badan, tinggi badan, dan usia.</p>
                 </a>
             </div>
+            <div class="menu-item">
+                <img src="picture/analisispenyakit.png" alt="Rekomendasi Diet">
+                <h4>Analisi Gejala Penyakit</h4>
+                <p>Menganalisis kemungkinan penyakit <br> melalui gejala yang dirasakan</p>
+            </div>
         </div>
         <div class="menu-items">
             <div class="menu-item">
@@ -140,9 +152,9 @@
                 <p>Memperkirakan usia kehamilan<br>berdasarkan hari pertama haid terakhir</p>
             </div>
             <div class="menu-item">
-                <img src="picture/analisispenyakit.png" alt="Rekomendasi Diet">
-                <h4>Analisi Gejala Penyakit</h4>
-                <p>Menganalisis kemungkinan penyakit <br> melalui gejala yang dirasakan</p>
+                <img src="picture/rokok.png" alt="Kalkulasi Rokok">
+                <h4>Kalkulator Rokok</h4>
+                <p>Menghitung biaya atau pengeluaran yang terkait dengan kebiasaan merokok</p>
             </div>
         </div>
     </div>

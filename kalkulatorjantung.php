@@ -3,184 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pengukur Risiko Penyakit Jantung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Risiko Serangan Jantung</title>
+    <?php require "partials/header.php"?>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
+        body{
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            padding-top: 150px;
+            padding :150px;
+            
         }
-        .container {
-            max-width: 800px;
+        .judul-intro{
+            font-family: "Roboto", sans-serif;
+            font-size: 30px;
+        }
+        .kotak-intro{
             margin: 0 auto;
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            border: 5px solid #ddd;
+            border-radius: 10px;
+            padding : 30px;
+            margin-bottom: 40px;
         }
-        h2 {
+        .kotak-intro img{
+            width: 600px;
+            margin-bottom: 40px;
             text-align: center;
-            color: #333;
-            margin-bottom: 20px;
         }
-        .form-group {
-            margin-bottom: 15px;
+        .kotak-intro p{
+            text-align: justify;
+            color :black;
         }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
+        .kotak{
+            width: 550px;
+            margin: 0 auto;
+            border: 2px solid black;
+            padding: 30px;
         }
-        .form-group input, .form-group select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 14px;
+        .kotak p{
+            color: black;
         }
-        button[type="submit"] {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            background-color: #28a745;
-            border: none;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
+        .masuk{
+            margin-bottom: 50px;
         }
-        button[type="submit"]:hover {
-            background-color: #218838;
+        .masuk p{
+            margin-bottom: 2px;
+        }
+        .radio-gank{
+            display: flex; 
+        }
+        .radio-gank label{
+            margin-right: 100px;
+        }
+        .radio-gank input[type="radio"]{
+            margin-right: 20px;
+        }
+        .judul{
+            font-size: 30px;
+            text-align: center;
+            color:black;
+            margin-bottom: 70px;
+        }
+        label{
+            display:block;
+            color:black;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Pengukur Risiko Penyakit Jantung</h2>
-        <form id="heartRiskForm">
-            <div class="form-group">
-                <label for="age">Usia</label>
-                <input type="number" id="age" name="age" required>
-            </div>
-            <div class="form-group">
-                <label for="gender">Jenis Kelamin</label>
-                <select id="gender" name="gender" required>
-                    <option value="">Pilih...</option>
-                    <option value="male">Pria</option>
-                    <option value="female">Wanita</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="familyHistory">Riwayat Keluarga</label>
-                <select id="familyHistory" name="familyHistory" required>
-                    <option value="">Pilih...</option>
-                    <option value="yes">Ya</option>
-                    <option value="no">Tidak</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="smoking">Kebiasaan Merokok</label>
-                <select id="smoking" name="smoking" required>
-                    <option value="">Pilih...</option>
-                    <option value="yes">Ya</option>
-                    <option value="no">Tidak</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="bloodPressure">Tekanan Darah Tinggi</label>
-                <select id="bloodPressure" name="bloodPressure" required>
-                    <option value="">Pilih...</option>
-                    <option value="yes">Ya</option>
-                    <option value="no">Tidak</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="cholesterol">Kolesterol Tinggi</label>
-                <select id="cholesterol" name="cholesterol" required>
-                    <option value="">Pilih...</option>
-                    <option value="yes">Ya</option>
-                    <option value="no">Tidak</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="diabetes">Diabetes</label>
-                <select id="diabetes" name="diabetes" required>
-                    <option value="">Pilih...</option>
-                    <option value="yes">Ya</option>
-                    <option value="no">Tidak</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="obesity">Obesitas atau Kegemukan</label>
-                <select id="obesity" name="obesity" required>
-                    <option value="">Pilih...</option>
-                    <option value="yes">Ya</option>
-                    <option value="no">Tidak</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="physicalActivity">Aktivitas Fisik</label>
-                <select id="physicalActivity" name="physicalActivity" required>
-                    <option value="">Pilih...</option>
-                    <option value="yes">Ya</option>
-                    <option value="no">Tidak</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="diet">Diet Tidak Sehat</label>
-                <select id="diet" name="diet" required>
-                    <option value="">Pilih...</option>
-                    <option value="yes">Ya</option>
-                    <option value="no">Tidak</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="stress">Stres</label>
-                <select id="stress" name="stress" required>
-                    <option value="">Pilih...</option>
-                    <option value="yes">Ya</option>
-                    <option value="no">Tidak</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="alcohol">Konsumsi Alkohol Berlebihan</label>
-                <select id="alcohol" name="alcohol" required>
-                    <option value="">Pilih...</option>
-                    <option value="yes">Ya</option>
-                    <option value="no">Tidak</option>
-                </select>
-            </div>
-            <button type="submit">Hitung Risiko</button>
-        </form>
-        <div id="result"></div>
+
+    <div class="kotak-intro">
+    <div class="judul-intro"><p>Serangan Jantung itu apa sih ?</p></div>
+    <img src="picture/seranganjantung.jpg" alt="Serangan Jantung">
+    <p>Serangan jantung, atau infark miokard, terjadi ketika aliran darah ke otot jantung tersumbat,<br>
+    dan berbagai faktor risiko dapat meningkatkannya. Faktor risiko yang tidak dapat dikendalikan meliputi<br>
+    usia, jenis kelamin, riwayat keluarga, dan ras atau etnis. Faktor yang dapat dikendalikan termasuk tekanan<br>
+    darah tinggi, kolesterol tinggi, diabetes, merokok, obesitas, kurang aktivitas fisik, diet tidak sehat,<br>
+    stres, dan konsumsi alkohol berlebih. Pencegahan serangan jantung dapat dilakukan dengan menjaga pola<br>
+    makan sehat, berolahraga teratur, menghindari merokok, mengelola stres, serta mengontrol kondisi medis seperti<br>
+    hipertensi dan diabetes. Mengenali dan mengelola faktor risiko ini sangat penting untuk mengurangi kemungkinan<br>
+    terkena serangan jantung.</p>
     </div>
-    <script>
-        document.getElementById('heartRiskForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            let score = 0;
-            const form = event.target;
-            const factors = ['familyHistory', 'smoking', 'bloodPressure', 'cholesterol', 'diabetes', 'obesity', 'physicalActivity', 'diet', 'stress', 'alcohol'];
-            
-            factors.forEach(factor => {
-                if (form[factor].value === 'yes') {
-                    score += 1;
-                }
-            });
 
-            const age = parseInt(form.age.value);
-            const gender = form.gender.value;
+    <div class="kotak">
+    <div class="judul">
+        <p>Kalkulator Risiko Serangan Jantung</p>
+    </div>
+    <form>
+        <div class="masuk"> <!-- Input Gender !----------------------------------------->
+        <p>Jenis Kelamin</p>
+        <div class="radio-gank">
+        <input type="radio" id="pria" name="gender">
+        <label for="pria">Pria</label>
 
-            if (age > 45 && gender === 'male') score += 1;
-            if (age > 55 && gender === 'female') score += 1;
+        <input type="radio" id="wanita" name="gender">
+        <label for="wanita">Wanita</label>
+        </div>
+        </div> <!-- End Input Gender ------------------------------------------------->
 
-            let risk = 'Rendah';
-            if (score >= 3 && score <= 5) risk = 'Sedang';
-            else if (score > 5) risk = 'Tinggi';
+        <div class="masuk"> <!-- Input Umur !------------------------------------------>
+        <p>Berapa Usia Anda?</p>
+        <input type="number" min="0" id="usia">
+        </div> <!-- End Input Umur ---------------------------------------------------->
 
-            document.getElementById('result').innerHTML = `<h3>Risiko Penyakit Jantung Anda: ${risk}</h3>`;
-        });
-    </script>
+        <div class="masuk"> <!-- Input Berat Badan & Tinggi!----------------------------------------->
+        <p>Berapa Berat Badan & Tinggi Badan Anda?</p>
+        <input type="number" min="1" placeholder="Berat (Kg)">
+        <input type="number" min="1" placeholder="Tinggi (cm)">
+        </div> <!-- End Input Berat Badan & Tinggi ---------------------------------------------------->
+
+        <div class="masuk"> <!-- Input Merokok!----------------------------------------->
+        <p>Apa Kamu Merokok?</p>
+        <div class="radio-gank">
+        <input type="radio" id="ya" name="merokok">
+        <label for="ya">Iya dong</label>
+
+        <input type="radio" id="tidak" name="merokok">
+        <label for="tidak">Tidak</label>
+        </div>
+        </div> <!-- End Input Merokok ---------------------------------------------------------->
+
+        <div class="masuk"> <!-- Input Diabetes!----------------------------------------->
+        <p>Apakah kamu memiliki risiko Diabetes?</p>
+        <div class="radio-gank">
+        <input type="radio" id="ya" name="diabetes">
+        <label for="ya">Iya i to</label>
+
+        <input type="radio" id="tidak" name="diabetes">
+        <label for="tidak">Alhamdulillah Tidak</label>
+        </div>
+        </div> <!-- End Input Diabetes!---------------------------------------->
+
+        <div class="masuk"> <!-- Input Riwayat Penyakit Jantung!----------------------------------------->
+        <p>Apakah kamu pernah terdiagnosa memiliki penyakit<br> seperti jantung koroner,
+            stroke atau penyakit jantung dan pembuluh darah lainnya?</p>
+        <div class="radio-gank">
+        <input type="radio" id="ya" name="riwayat">
+        <label for="ya">Iyaa</label>
+
+        <input type="radio" id="tidak" name="riwayat">
+        <label for="tidak">Alhamdulillah tidak</label>
+        </div>
+        </div> <!-- End Riwayat Jantung ------------------------------------------------------>
+
+        <div class="masuk"> <!-- Input Tekanan Darah!----------------------------------------->
+        <p>Berapa tekanan darah kamu?</p>
+        <label for="systolic">Tekanan Darah Sistolik (mmHg)<span style="color: red;">*</span></label><br>
+        <input type="number" id="systolic" name="systolic" min="1" placeholder="Sistolik (mmHg)" required>
+        </div> <!--End Input Tekanan Darah --------------------------------------------------------------->
+
+        <div class="button">
+            <input type="submit" value="Hitung!!!">
+        </div>
+        </div>
 </body>
 </html>
